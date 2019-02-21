@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Aula02.Class;
 
 namespace Aula02
 {
@@ -19,6 +20,9 @@ namespace Aula02
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            Poker poker = new Poker();
+
             var chars = "AKJQ123456789";
             var random = new Random();
             var mao1 = new string(
@@ -33,69 +37,12 @@ namespace Aula02
                           .Select(s => s[random.Next(s.Length)])
                           .ToArray());
 
+            string sequencia = poker.Straight(mao1, mao2);
 
-
-            //Straight
-            List<string> cartasMao1 = new List<string>();
-            cartasMao1.Add(mao1.Substring(0, 1));
-            cartasMao1.Add(mao1.Substring(1, 1));
-            cartasMao1.Add(mao1.Substring(2, 1));
-            cartasMao1.Add(mao1.Substring(3, 1));
-            cartasMao1.Add(mao1.Substring(4, 1));
-
-            cartasMao1.OrderBy(c => c).ToList();
-            List<string> mao1Aux = new List<string>();
-
-            foreach (var item in cartasMao1)
-            {
-
-                switch (item)
-                {
-                    case "J":
-                        mao1Aux.Add("11");
-                        break;
-                    case "Q":
-                        mao1Aux.Add("12");
-                        break;
-                    case "K":
-                        mao1Aux.Add("13");
-                        break;
-                    case "A":
-                        mao1Aux.Add("14");
-                        break;
-                    default:
-                        mao1Aux.Add(item);
-                        break;
-                }
-
-            }
-
-            cartasMao1 = mao1Aux;
-            cartasMao1.OrderBy(c => c).ToList();
-
-            foreach (var item in cartasMao1)
-            {
-                int seq = 0;
-                int controle = 0;
-                string sequencia = string.Empty;
-
-                if (sequencia.Length == 0)
-                {
-                    controle = seq;
-                    sequencia = sequencia + item.ToString();
-                }
-                else
-                {
-                    if (controle + 1 == seq)
-                        sequencia = sequencia + item.ToString();
-                }
-
-                if (sequencia.Length == 5)
-                    MessageBox.Show("Straight" + Environment.NewLine + sequencia);
-                else
-                    MessageBox.Show("Não rolou Straight" + Environment.NewLine + mao1.ToString());
-
-            }
+            if (sequencia.Length == 5)
+                MessageBox.Show("Straight" + Environment.NewLine + sequencia);
+            else
+                MessageBox.Show("Não rolou Straight" + Environment.NewLine + mao1.ToString());
 
         }
     }
