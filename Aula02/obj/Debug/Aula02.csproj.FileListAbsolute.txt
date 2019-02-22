@@ -1,0 +1,10 @@
+C:\Users\kyrla\fkw2\Aula02\Aula02\bin\Debug\Aula02.exe.config
+C:\Users\kyrla\fkw2\Aula02\Aula02\bin\Debug\Aula02.exe
+C:\Users\kyrla\fkw2\Aula02\Aula02\bin\Debug\Aula02.pdb
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.csprojAssemblyReference.cache
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.Form1.resources
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.Properties.Resources.resources
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.csproj.GenerateResource.cache
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.csproj.CoreCompileInputs.cache
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.exe
+C:\Users\kyrla\fkw2\Aula02\Aula02\obj\Debug\Aula02.pdb
